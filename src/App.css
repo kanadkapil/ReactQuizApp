@@ -1,0 +1,212 @@
+.app {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  color: white;
+  background: linear-gradient(to bottom, rgba(215, 147, 147, 0), #545459),
+    url("https://img.freepik.com/free-photo/leaf-patterned-nature-illustration-abstract-plant-design-generative-ai_188544-12678.jpg?t=st=1731746420~exp=1731750020~hmac=d4e2ee507922ea99549369447c0f1ed09f0682361df6a6e0cb669472c8d78f71&w=1380") center;
+  background-size: cover;  /* Ensures the image covers the full screen */
+  background-position: center center;  /* Centers the image */
+  background-attachment: fixed; /* Optional: this makes the background image fixed when scrolling */
+}
+
+
+.main {
+  width: 95%;
+  background: linear-gradient(to bottom, rgba(215, 147, 147, 0), #545459),
+    url("https://img.freepik.com/free-photo/tropical-green-leaves-background_53876-88891.jpg?t=st=1731746595~exp=1731750195~hmac=3a3236d538fbd0349018c3684152a070a26c62cf41eab5254c18b718d8a3bb52&w=1380") center;
+  display: flex;
+  flex-direction: column;
+}
+
+.pyramid {
+  width: 25%;
+  background-color: #3939cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moneyList {
+  padding: 20px;
+  list-style: none;
+  width: 100%;
+}
+
+.moneyListItem {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.moneyListItem.active {
+  background-color: rgb(14, 181, 181);
+}
+
+.moneyListItemNumber {
+  width: 30%;
+  font-size: 24px;
+  font-weight: 600;
+  padding-left: 30px;
+}
+
+.moneyListItemAmount {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.top {
+  height: 50%;
+  position: relative;
+}
+
+.timer {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 80px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.bottom {
+  height: 50%;
+}
+
+.trivia {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.question {
+  width: 80%;
+  background: linear-gradient(#21b4d9, rgb(5, 111, 210));
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+  font-size: 20px;
+}
+
+.answers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.answer {
+  width: 40%;
+  padding: 10px;
+  margin: 0 10px 20px 10px;
+  text-align: center;
+  background: linear-gradient(#21b4d9, rgb(5, 111, 210));
+  border: 1px solid white;
+  border-radius: 15px;
+  font-weight: 300;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.answer:hover,
+.answer.active {
+  background: rgb(62, 62, 234);
+}
+
+.answer.correct {
+  animation: correct 2s ease forwards;
+}
+
+@keyframes correct {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#c2b9d2, #a1ac49);
+  }
+  62%,
+  100% {
+    background: green;
+  }
+}
+
+.answer.wrong {
+  animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: crimson;
+  }
+}
+
+.endText {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.start {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.startInput {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.startInput:focus {
+  outline: none;
+}
+
+.startButton {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
